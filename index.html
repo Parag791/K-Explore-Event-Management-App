@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover, explore and register for exciting events.">
+  <title>Eventra — Discover What's Happening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#"><span class="logo-mark">E</span> eventra<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#events">Explore events</a>
+        <a href="#about">About</a>
+        <a href="#footer">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+        <a class="nav-cta" href="#events">Find an event <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+      <div class="container hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> MAKE EVERY MOMENT COUNT</div>
+        <h1>Find your next<br><span>great experience.</span></h1>
+        <p class="hero-copy">From creative workshops to live music and tech meetups — discover events that bring people together.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#events">Explore events <span>↗</span></a>
+          <a class="text-btn" href="#about">How it works <span>↓</span></a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>120<span>+</span></strong><small>Events hosted</small></div>
+          <div><strong>8k<span>+</span></strong><small>Happy attendees</small></div>
+          <div><strong>25<span>+</span></strong><small>Communities</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Decorative event illustration">
+        <div class="art-card art-main"><div class="art-top"><span>UPCOMING EVENT</span><span>✦</span></div><div class="art-orb">✦</div><div class="art-bottom"><b>Ideas after hours</b><small>Connect · Create · Inspire</small></div></div>
+        <div class="floating-note note-one">🎟️ &nbsp; Your next memory</div>
+        <div class="floating-note note-two">✧ &nbsp; Discover something new</div>
+      </div>
+    </section>
+
+    <section class="events-section section-pad" id="events">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow">THE GOOD STUFF</div><h2>Explore <span>events.</span></h2><p>Find something worth looking forward to.</p></div>
+          <div class="event-count"><strong id="eventCount">6</strong><span>events to explore</span></div>
+        </div>
+        <div class="filter-bar">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search events, locations..." aria-label="Search events"></label>
+          <div class="filter-chips" id="categoryFilters">
+            <button class="chip active" data-category="All">All events</button>
+            <button class="chip" data-category="Technology">Technology</button>
+            <button class="chip" data-category="Music">Music</button>
+            <button class="chip" data-category="Workshop">Workshop</button>
+            <button class="chip" data-category="Art">Art & culture</button>
+          </div>
+        </div>
+        <div class="event-grid" id="eventGrid"></div>
+        <p class="empty-state hidden" id="emptyState">No events found. Try another search or category.</p>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="container about-grid">
+        <div><div class="eyebrow">SIMPLE BY DESIGN</div><h2>Good plans.<br><span>Great people.</span></h2></div>
+        <div class="about-copy"><p>Eventra makes it easy to find experiences that match your interests. Browse upcoming events, explore the details, and reserve your spot in just a few clicks.</p><div class="steps"><div><b>01</b><span><strong>Discover</strong><small>Browse events by interest.</small></span></div><div><b>02</b><span><strong>Explore</strong><small>Check dates, venues and details.</small></span></div><div><b>03</b><span><strong>Register</strong><small>Save your place and get ready.</small></span></div></div></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-inner"><div><div class="eyebrow">YOUR CALENDAR CALLED</div><h2>Make room for<br>something <span>memorable.</span></h2></div><a class="primary-btn light-btn" href="#events">Find your event <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer id="footer"><div class="container footer-inner"><a class="logo" href="#"><span class="logo-mark">E</span> eventra<span class="dot">.</span></a><p>Discover. Connect. Experience.</p><small>© <span id="year"></span> Eventra. Student project for web designing.</small></div></footer>
+
+  <div class="modal-backdrop hidden" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
